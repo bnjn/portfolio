@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-body {
+h1, h2, p, body {
   margin: 0;
   padding: 0;
 }
