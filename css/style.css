@@ -1,5 +1,13 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 h1, h2, p, body, img, div {
@@ -14,14 +22,18 @@ html {
 
 body {
   background: url('../img/bg.png') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
 }
 
 .blink-text {
-  animation: blinker 2s linear infinite;
+  -webkit-animation: blinker 2s linear infinite;
+          animation: blinker 2s linear infinite;
+}
+
+@-webkit-keyframes blinker {
+  50% {
+    opacity: 0;
+  }
 }
 
 @keyframes blinker {
@@ -31,8 +43,12 @@ body {
 }
 
 .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding-top: 35vh;
 }
 
@@ -43,13 +59,21 @@ body {
 }
 
 .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
-  flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   margin-top: 10vh;
 }
 
 .nav button {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background-color: #FFFFFF00;
   color: #FFFFFF;
@@ -58,9 +82,14 @@ body {
   width: 30%;
   height: 3rem;
   margin: 5vw;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 5px 5px #00000080;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 5px 5px #00000080;
+          box-shadow: 5px 5px #00000080;
 }
 
 .nav button:hover {
@@ -83,18 +112,30 @@ body {
 }
 
 .about-flexbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .about-flexbox img {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 28rem;
   width: 28rem;
   border-radius: 40px;
-  box-shadow: 5px 5px #00000080;
+  -webkit-box-shadow: 5px 5px #00000080;
+          box-shadow: 5px 5px #00000080;
 }
 
 .projects h2 {
@@ -106,10 +147,17 @@ body {
 .project-container {
   margin-left: 11.5vw;
   margin-right: 11.5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
 }
 
@@ -119,8 +167,12 @@ body {
 }
 
 .project-container div {
-  flex: 0 0 33%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 33%;
+          flex: 0 0 33%;
   margin-bottom: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -157,7 +209,8 @@ body {
   border-radius: 5px;
   width: 4rem;
   height: 4rem;
-  box-shadow: 5px 5px #00000080;
+  -webkit-box-shadow: 5px 5px #00000080;
+          box-shadow: 5px 5px #00000080;
 }
 
 #upbutton:hover {
@@ -173,13 +226,22 @@ footer {
 
 @media only screen and (max-width: 500px) {
   .project-container {
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 
   .nav {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 
   .header {
